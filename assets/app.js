@@ -3,9 +3,12 @@
   const projects = window.PORTFOLIO || [];
   const escape = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const external = value => { try { const url = new URL(value); return url.protocol === 'https:' ? escape(url.href) : ''; } catch { return ''; } };
-  const status = project => `<span class="status ${project.status === 'planned' ? 'planned' : ''}"><span class="dot"></span>${project.status === 'planned' ? 'Planlandı' : 'Geliştiriliyor'}</span>`;
+  const local = value => { try { if (!value || /^(?:[a-z]+:|\/\/)/i.test(value)) return ''; const url = new URL(value, window.location.href); return url.origin === window.location.origin ? escape(value) : ''; } catch { return ''; } };
+  const status = project => `<span class="status ${project.status === 'planned' ? 'planned' : ''}"><span class="dot"></span>${project.status === 'planned' ? 'Planlandı' : project.status === 'live' ? 'Yayında' : 'Geliştiriliyor'}</span>`;
   const tags = project => `<ul class="tags" aria-label="Teknolojiler">${project.tags.map(tag => `<li>${escape(tag)}</li>`).join('')}</ul>`;
   const artwork = project => {
+    const image = local(project.image);
+    if (image) return `<div class="project-art art-screenshot"><img class="project-preview" src="${image}" alt="${escape(project.imageAlt || project.title)}" width="1366" height="768" loading="lazy" decoding="async"></div>`;
     const illustrations = {
       music: '<div class="music-frame"><div class="music-head"><strong>vibey.</strong><small>KEŞFET / DİNLE</small></div><div class="music-albums"><span class="album"></span><span class="album"></span><span class="album"></span></div><div class="music-track"><span>Ruh haline bir albüm bul.</span><span>↗</span></div></div>',
       portfolio: '<div class="mini-site"><div class="mini-nav"><strong>et.</strong><span>PROJELER & DENEMELER</span></div><div class="mini-body"><strong>Bir fikir.<br>Bir proje.<br>Bir adım daha.</strong><span>&lt;/&gt;</span></div><div class="mini-line"></div><div class="mini-line short"></div></div>',
@@ -16,8 +19,8 @@
     return `<div class="project-art art-${visual}" aria-hidden="true">${illustrations[visual]}</div>`;
   };
   const card = project => {
-    const url = `project.html?id=${encodeURIComponent(project.id)}`;
-    return `<article class="project-card"><a class="visual-link" href="${url}" aria-label="${escape(project.title)} proje detayını aç">${artwork(project)}</a><div class="card-topline"><span class="card-label">${escape(project.number)} / ${escape(project.label)}</span>${status(project)}</div><h3 class="card-title"><a href="${url}">${escape(project.title)}</a><span class="card-arrow" aria-hidden="true">↗</span></h3><p class="card-description">${escape(project.description)}</p>${tags(project)}</article>`;
+    const url = `project.html?id=${encodeURIComponent(project.id)}`, launch = local(project.app);
+    return `<article class="project-card"><a class="visual-link" href="${url}" aria-label="${escape(project.title)} proje detayını aç">${artwork(project)}</a><div class="card-topline"><span class="card-label">${escape(project.number)} / ${escape(project.label)}</span>${status(project)}</div><h3 class="card-title"><a href="${url}">${escape(project.title)}</a><span class="card-arrow" aria-hidden="true">↗</span></h3><p class="card-description">${escape(project.description)}</p>${tags(project)}${launch ? `<div class="card-actions"><a class="button primary" href="${launch}">Uygulamayı aç <span aria-hidden="true">↗</span></a></div>` : ''}</article>`;
   };
   let savedTheme = null;
   try { savedTheme = localStorage.getItem('et-theme'); } catch {}
@@ -80,7 +83,7 @@
     document.title = `${project.title} — Enes Tahtacı`;
     document.querySelector('meta[name="description"]').content = project.description;
     const list = items => `<ul class="detail-list">${items.map(item => `<li>${escape(item)}</li>`).join('')}</ul>`;
-    const repo = external(project.repo), demo = external(project.demo);
-    detail.innerHTML = `<section class="detail-hero"><div><div class="detail-heading-meta"><p class="eyebrow">${escape(project.number)} / ${escape(project.category)}</p>${status(project)}</div><h1>${escape(project.title)}</h1><p class="detail-intro">${escape(project.intro)}</p>${tags(project)}${repo || demo ? `<div class="detail-actions">${repo ? `<a class="button primary" href="${repo}" target="_blank" rel="noopener noreferrer">Kaynak kod <span aria-hidden="true">↗</span><span class="sr-only">(yeni sekmede)</span></a>` : ''}${demo ? `<a class="button primary" href="${demo}" target="_blank" rel="noopener noreferrer">Canlı demo <span aria-hidden="true">↗</span><span class="sr-only">(yeni sekmede)</span></a>` : ''}</div>` : ''}</div>${artwork(project)}</section><div class="detail-grid"><div class="detail-prose"><section><h2>Çıkış noktası</h2><p>${escape(project.problem)}</p></section><section><h2>Yaklaşım</h2><p>${escape(project.approach)}</p></section>${project.features.length ? `<section><h2>Mevcut özellikler</h2>${list(project.features)}</section>` : ''}</div><aside class="detail-sidebar"><h2>Sıradaki adımlar</h2>${list(project.next)}<p class="detail-note">${escape(project.note)}</p></aside></div>`;
+    const repo = external(project.repo), launch = local(project.app), demo = launch || external(project.demo);
+    detail.innerHTML = `<section class="detail-hero"><div><div class="detail-heading-meta"><p class="eyebrow">${escape(project.number)} / ${escape(project.category)}</p>${status(project)}</div><h1>${escape(project.title)}</h1><p class="detail-intro">${escape(project.intro)}</p>${tags(project)}${repo || demo ? `<div class="detail-actions">${repo ? `<a class="button primary" href="${repo}" target="_blank" rel="noopener noreferrer">Kaynak kod <span aria-hidden="true">↗</span><span class="sr-only">(yeni sekmede)</span></a>` : ''}${demo ? `<a class="button primary" href="${demo}" ${launch ? '' : 'target="_blank" rel="noopener noreferrer"'}>${launch ? 'Uygulamayı aç' : 'Canlı demo'} <span aria-hidden="true">↗</span>${launch ? '' : '<span class="sr-only">(yeni sekmede)</span>'}</a>` : ''}</div>` : ''}</div>${artwork(project)}</section><div class="detail-grid"><div class="detail-prose"><section><h2>Çıkış noktası</h2><p>${escape(project.problem)}</p></section><section><h2>Yaklaşım</h2><p>${escape(project.approach)}</p></section>${project.features.length ? `<section><h2>Mevcut özellikler</h2>${list(project.features)}</section>` : ''}</div><aside class="detail-sidebar"><h2>Sıradaki adımlar</h2>${list(project.next)}<p class="detail-note">${escape(project.note)}</p></aside></div>`;
   }
 })();

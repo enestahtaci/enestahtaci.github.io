@@ -2,7 +2,45 @@
 // Tamamlanmamış fikirleri status: "planned" ile işaretle.
 window.PORTFOLIO = [
   {
-    id: "vibey", number: "01", title: "vibey", category: "Web",
+    "id": "grain",
+    "number": "01",
+    "title": "Grainy Gradient Studio",
+    "category": "Web",
+    "status": "live",
+    "visual": "screenshot",
+    "image": "grain/preview.png",
+    "imageAlt": "Grainy Gradient Studio: gradyan tuvali ve kategorize preset kütüphanesi",
+    "label": "Renk ve doku stüdyosu",
+    "description": "1.262 hazır tasarım, renk ve duygu filtreleriyle gradyan üret. Mesh, katman ve hareket ekle; görsel, video veya JSON olarak paylaş.",
+    "tags": [
+      "Canvas",
+      "JavaScript",
+      "OKLab",
+      "JSON"
+    ],
+    "intro": "Renkleri ve dokuları keşfetmek, kendi gradyanlarını oluşturmak ve tasarımlarını paylaşmak için tarayıcıda çalışan bir stüdyo.",
+    "problem": "Uyumlu renkleri bulmayı, dokuları denemeyi ve farklı ölçülerde görsel üretmeyi tek bir çalışma alanında toplamak.",
+    "approach": "Tüm işlemler tarayıcıda gerçekleşiyor. Renk yakınlığı OKLab ile hesaplanıyor; fotoğraf paletleri cihazda çıkarılıyor. Tasarım JSON dosyasıyla paylaşılabiliyor ve yeniden düzenlenebiliyor.",
+    "features": [
+      "14 duygu ve 11 renk ailesiyle kategorize 1.262 preset",
+      "Seçilen renge veya fotoğraf paletine yakın tasarımları bulma",
+      "Bézier mesh, dört katmana kadar düzenleme ve yedi doku türü",
+      "A/B karşılaştırma ve web, kart, afiş önizlemeleri",
+      "Noktaya özel hareket ve anahtar kareler",
+      "PNG, JPEG, WebP, SVG ve destekleyen tarayıcılarda WebM çıktısı",
+      "Dosyadan veya metinden JSON içe/dışa aktarma"
+    ],
+    "next": [
+      "Gerçek Safari, Firefox ve telefon testlerini genişletmek",
+      "Yeni palet aileleri ve kompozisyonlar eklemek"
+    ],
+    "note": "Hesap ve kurulum gerektirmez. Fotoğraflar cihazında işlenir; favoriler kendi tarayıcında saklanır. Video özellikleri tarayıcı desteğine bağlıdır.",
+    "repo": "https://github.com/enestahtaci/enestahtaci.github.io/tree/main/grain",
+    "demo": "https://enestahtaci.github.io/grain/",
+    "app": "grain/"
+  },
+  {
+    id: "vibey", number: "02", title: "vibey", category: "Web",
     status: "active", visual: "music", label: "Müzik keşfi",
     description: "Albüm keşfi, şarkı sözleri ve küçük müzik oyunlarını bir araya getiren web projesi.",
     tags: ["HTML", "CSS", "JavaScript", "JSON"],
@@ -15,7 +53,7 @@ window.PORTFOLIO = [
     repo: "", demo: ""
   },
   {
-    id: "portfolyo", number: "02", title: "Kişisel portföy", category: "Web",
+    id: "portfolyo", number: "03", title: "Kişisel portföy", category: "Web",
     status: "active", visual: "portfolio", label: "Kendine ait bir alan",
     description: "Projelerimi, üzerinde çalıştıklarımı ve sıradaki fikirlerimi bir araya getirdiğim kişisel web sayfam.",
     tags: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
@@ -28,7 +66,7 @@ window.PORTFOLIO = [
     repo: "https://github.com/enestahtaci/enestahtaci.github.io", demo: ""
   },
   {
-    id: "gorev-panosu", number: "03", title: "Görev panosu", category: "Arayüz",
+    id: "gorev-panosu", number: "04", title: "Görev panosu", category: "Arayüz",
     status: "planned", visual: "board", label: "Sıradaki fikir",
     description: "Günlük işleri yapılacak, devam eden ve tamamlanan olarak düzenlemek için bir proje fikri.",
     tags: ["JavaScript", "LocalStorage", "Erişilebilirlik"],
@@ -41,7 +79,7 @@ window.PORTFOLIO = [
     repo: "", demo: ""
   },
   {
-    id: "veri-atolyesi", number: "04", title: "Veri atölyesi", category: "Veri",
+    id: "veri-atolyesi", number: "05", title: "Veri atölyesi", category: "Veri",
     status: "planned", visual: "data", label: "Sıradaki fikir",
     description: "Bir veri setini okunabilir grafiklerle keşfetmeye odaklanan küçük bir görselleştirme projesi fikri.",
     tags: ["JavaScript", "CSV", "SVG"],

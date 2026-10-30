@@ -64,3 +64,13 @@ Hedef adres: https://enestahtaci.github.io
 - Hakkımda metnini ve isteğe bağlı iletişim bağlantılarını kişiselleştirmek.
 - Her projeye süreç görselleri ve gerçek demo bağlantıları eklemek.
 - Daha fazla içerik biriktiğinde geliştirme günlüğü oluşturmak.
+
+## Grainy Gradient Studio
+
+Canlı uygulama: https://enestahtaci.github.io/grain/
+
+- `grain/index.html`: JSON paylaşımı dahil bağımsız uygulama. Sunucu veya kurulum gerektirmez.
+- `grain/preview.png`: proje kartı ve detay sayfasında kullanılan gerçek ekran görüntüsü.
+- Proje kartı `assets/projects.js` içinde; doğrudan uygulama bağlantısı ve proje detay sayfası aynı kaydı kullanır.
+- Uygulamadaki Ana sayfa bağlantısı portföye döner. Ana sayfa düzeni ve mevcut projeler korunur.
+- Kaynak stüdyo projesinde `node build.cjs --pages` çalıştırılarak yayın dosyaları yeniden üretilebilir. Üretilen `github-pages/grain/` içeriği bu repodaki `grain/` klasörüne kopyalanır.
