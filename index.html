@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Enes Tahtacı'nın projeleri, web denemeleri ve geliştirme fikirleri. Her projenin arkasındaki süreci keşfet.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Enes Tahtacı — Projeler & Denemeler</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/projects.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+  <header class="header wrap">
+    <a class="brand" href="index.html" aria-label="Enes Tahtacı ana sayfa"><span class="monogram">et<span>.</span></span><span>ENES TAHTACI</span></a>
+    <nav aria-label="Ana menü"><a href="#projeler">Projeler</a><a href="#hakkimda">Hakkımda</a><a href="#iletisim">İletişim</a></nav>
+    <button class="theme-button" type="button" aria-label="Koyu temaya geç" aria-pressed="false" hidden><span aria-hidden="true">◐</span></button>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> KİŞİSEL ÇALIŞMA ALANIM</p>
+        <h1 id="hero-title">Bir fikir.<br>Bir proje.<br><span>Bir adım daha.</span></h1>
+        <p class="hero-description">Merhaba, ben Enes. Burası yaptıklarımı, denediklerimi ve zamanla geliştireceğim projeleri bir araya getirdiğim alan.</p>
+        <a class="button primary" href="#projeler">Projeleri keşfet <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="workbench" aria-label="Portföyün gelişim süreci">
+        <div class="bench-top"><span><i></i><i></i><i></i></span><span>çalışma masası / 001</span></div>
+        <div class="bench-content"><p class="small-label">BİRİKTİR. DENE. GELİŞTİR.</p><div class="bench-mark" aria-hidden="true">&lt;<span>et</span>/&gt;</div><p class="bench-caption">Küçük başlangıçlar,<br>üzerine eklenen fikirler.</p></div>
+        <div class="bench-bottom"><span class="dot"></span> Bu sayfa da bir proje.</div>
+        <span class="paper-note" aria-hidden="true">her sürümde<br>biraz daha iyi. ↗</span>
+      </div>
+    </section>
+    <div class="index-strip wrap"><span>FİKİRDEN EKRANA</span><span>Web · Arayüz · Veri</span><a href="#projeler">Aşağıda keşfet <span aria-hidden="true">↓</span></a></div>
+    <section class="projects-section wrap" id="projeler" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / PROJELER</p><h2 id="projects-title">Üzerinde çalıştıklarım<span class="accent">.</span></h2></div><p>Tamamlanan işler kadar,<br>yolun başındaki fikirler de burada.</p></div>
+      <div class="project-tools" hidden>
+        <div class="filters" role="group" aria-label="Proje kategorisi"><button class="filter active" data-filter="all" aria-pressed="true">Tümü <span id="project-total"></span></button><button class="filter" data-filter="Web" aria-pressed="false">Web</button><button class="filter" data-filter="Arayüz" aria-pressed="false">Arayüz</button><button class="filter" data-filter="Veri" aria-pressed="false">Veri</button></div>
+        <label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">Projelerde ara</span><input id="project-search" type="search" placeholder="Proje veya teknoloji ara" autocomplete="off"></label>
+      </div>
+      <p class="sr-only" id="result-count" role="status" aria-live="polite"></p>
+      <div class="project-grid" id="project-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>Bu aramayla eşleşen proje yok. Başka bir kelime veya kategori deneyebilirsin.</p>
+      <noscript><p>Proje kartlarını görmek için JavaScript'i etkinleştir. Mevcut projeler: vibey ve Kişisel portföy. Planlanan fikirler: Görev panosu ve Veri atölyesi.</p></noscript>
+      <div class="project-footnote"><span class="dot"></span> Bu bir bitiş çizgisi değil; büyüyen bir arşiv.</div>
+    </section>
+    <section class="about-section" id="hakkimda" aria-labelledby="about-title"><div class="wrap about-grid">
+      <div><p class="eyebrow">02 / HAKKIMDA</p><h2 id="about-title">Yaparak öğrenmek,<br>üzerine ekleyerek <br><span class="accent">ilerlemek.</span></h2></div>
+      <div class="about-copy"><p class="lead">Bir şeyi öğrenmenin en güzel yollarından biri, onunla bir şey yapmak.</p><p>Bu sayfayı projelerime düzenli olarak dönmek, onları geliştirmek ve yeni fikirler için yer açmak amacıyla kuruyorum. Her proje sayfasında neyi amaçladığımı, nasıl yaklaştığımı ve sırada ne olduğunu bulabilirsin.</p><p>Şimdilik küçük bir başlangıç. Zamanla daha fazla proje, daha fazla deneme ve süreçten notlar burada olacak.</p><a class="text-link" href="https://github.com/enestahtaci" target="_blank" rel="noopener noreferrer">GitHub profilimi incele <span aria-hidden="true">↗</span><span class="sr-only"> (yeni sekmede)</span></a></div>
+    </div></section>
+    <section class="contact-section wrap" id="iletisim" aria-labelledby="contact-title"><div><p class="eyebrow">03 / İLETİŞİM</p><h2 id="contact-title">Bir sonraki fikir<br>bir merhabayla başlayabilir.</h2></div><a class="button primary" href="https://github.com/enestahtaci" target="_blank" rel="noopener noreferrer">GitHub'da buluşalım <span aria-hidden="true">↗</span><span class="sr-only"> (yeni sekmede)</span></a></section>
+  </main>
+  <footer class="footer wrap"><span>© <span class="year">2026</span> Enes Tahtacı</span><span>Merakla başladı. Yaparak büyüyor.</span><a href="#main">Başa dön ↑</a></footer>
+</body>
+</html>
