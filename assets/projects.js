@@ -28,7 +28,8 @@ window.PORTFOLIO = [
       "A/B karşılaştırma ve web, kart, afiş önizlemeleri",
       "Noktaya özel hareket ve anahtar kareler",
       "PNG, JPEG, WebP, SVG ve destekleyen tarayıcılarda WebM çıktısı",
-      "Dosyadan veya metinden JSON içe/dışa aktarma"
+      "Dosyadan veya metinden JSON içe/dışa aktarma",
+      "Preset seçerken belirlenen tuval ölçüsünü koruma"
     ],
     "next": [
       "Gerçek Safari, Firefox ve telefon testlerini genişletmek",
@@ -60,8 +61,8 @@ window.PORTFOLIO = [
     intro: "Tek bir sayfayla başlayıp her yeni projeyle büyüyen kişisel bir çalışma arşivi.",
     problem: "Projeleri yalnızca bir isim ve bağlantıyla listelemek yerine, ne yaptıklarını ve nasıl geliştirildiklerini anlatmak.",
     approach: "Derleme aracı gerektirmeyen bir yapı seçildi. Proje bilgileri tek bir JavaScript dosyasında tutuluyor; kartlar ve detay sayfaları aynı veriyi kullanıyor.",
-    features: ["Arama ve kategori filtreleri", "Her proje için ayrı detay adresi", "Açık ve koyu tema", "Mobil ekrana uyumlu tasarım"],
-    next: ["GitHub Pages yayın ayarını tamamlamak", "Hakkımda bölümünü kişiselleştirmek", "Yeni projeleri ve geliştirme notlarını eklemek"],
+    features: ["Arama ve kategori filtreleri", "Her proje için ayrı detay adresi", "Açık ve koyu tema", "Mobil ekrana uyumlu tasarım", "Tercihi hatırlayan Türkçe ve İngilizce seçenekleri"],
+    next: ["Hakkımda bölümünü kişiselleştirmek", "Yeni projeleri ve geliştirme notlarını eklemek"],
     note: "Şu anda görüntülediğin portföyün ilk sürümü. İçerik ve tasarım zamanla güncellenecek.",
     repo: "https://github.com/enestahtaci/enestahtaci.github.io", demo: ""
   },

@@ -74,3 +74,9 @@ Canlı uygulama: https://enestahtaci.github.io/grain/
 - Proje kartı `assets/projects.js` içinde; doğrudan uygulama bağlantısı ve proje detay sayfası aynı kaydı kullanır.
 - Uygulamadaki Ana sayfa bağlantısı portföye döner. Ana sayfa düzeni ve mevcut projeler korunur.
 - Kaynak stüdyo projesinde `node build.cjs --pages` çalıştırılarak yayın dosyaları yeniden üretilebilir. Üretilen `github-pages/grain/` içeriği bu repodaki `grain/` klasörüne kopyalanır.
+
+## Dil seçimi
+
+Sağ üstteki EN / TR düğmesi ana sayfayı, arama/filtre etiketlerini, proje kartlarını, tüm proje detaylarını ve hata sayfasını çevirir. Tercih `et-language` anahtarıyla tarayıcıda saklanır. İngilizce bir başlangıç bağlantısı için `https://enestahtaci.github.io/?lang=en` kullanılabilir. İngilizce metinler `assets/i18n.js`, Türkçe metinler mevcut HTML ve `assets/projects.js` dosyalarındadır. Yeni proje eklerken aynı `id` için İngilizce kaydı da ekle.
+
+Grain Studio presetleri seçilen tuval ölçüsünü korur; küçük resimler de aynı en-boy oranıyla üretilir. JSON içe aktarma ve favoriler, kaydedilmiş tasarımın ölçüsünü geri yükler.

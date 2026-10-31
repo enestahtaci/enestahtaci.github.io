@@ -3,55 +3,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Enes Tahtacı'nın projeleri, web denemeleri ve geliştirme fikirleri. Her projenin arkasındaki süreci keşfet.">
+  <meta data-i18n-content="homeMeta" name="description" content="Enes Tahtacı'nın projeleri, web denemeleri ve geliştirme fikirleri. Her projenin arkasındaki süreci keşfet.">
   <meta name="theme-color" content="#f7f6f2">
   <title>Enes Tahtacı — Projeler & Denemeler</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/projects.js" defer></script>
+  <script src="assets/i18n.js" defer></script>
   <script src="assets/app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">İçeriğe geç</a>
+  <a class="skip-link" href="#main" data-i18n="skip">İçeriğe geç</a>
   <header class="header wrap">
-    <a class="brand" href="index.html" aria-label="Enes Tahtacı ana sayfa"><span class="monogram">et<span>.</span></span><span>ENES TAHTACI</span></a>
-    <nav aria-label="Ana menü"><a href="#projeler">Projeler</a><a href="#hakkimda">Hakkımda</a><a href="#iletisim">İletişim</a></nav>
-    <button class="theme-button" type="button" aria-label="Koyu temaya geç" aria-pressed="false" hidden><span aria-hidden="true">◐</span></button>
+    <a class="brand" href="index.html" aria-label="Enes Tahtacı ana sayfa" data-i18n-aria="homeAria"><span class="monogram">et<span>.</span></span><span>ENES TAHTACI</span></a>
+    <nav aria-label="Ana menü" data-i18n-aria="navAria"><a href="#projeler" data-i18n="projects">Projeler</a><a href="#hakkimda" data-i18n="about">Hakkımda</a><a href="#iletisim" data-i18n="contact">İletişim</a></nav>
+    <div class="header-controls"><button class="language-button" type="button" id="language-button" aria-label="İngilizceye geç" hidden>EN</button><button class="theme-button" type="button" aria-label="Koyu temaya geç" aria-pressed="false" hidden><span aria-hidden="true">◐</span></button></div>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="dot"></span> KİŞİSEL ÇALIŞMA ALANIM</p>
-        <h1 id="hero-title">Bir fikir.<br>Bir proje.<br><span>Bir adım daha.</span></h1>
-        <p class="hero-description">Merhaba, ben Enes. Burası yaptıklarımı, denediklerimi ve zamanla geliştireceğim projeleri bir araya getirdiğim alan.</p>
-        <a class="button primary" href="#projeler">Projeleri keşfet <span aria-hidden="true">↘</span></a>
+        <p class="eyebrow" data-i18n="heroEyebrow"><span class="dot"></span> KİŞİSEL ÇALIŞMA ALANIM</p>
+        <h1 id="hero-title" data-i18n="heroTitle">Bir fikir.<br>Bir proje.<br><span>Bir adım daha.</span></h1>
+        <p class="hero-description" data-i18n="heroDescription">Merhaba, ben Enes. Burası yaptıklarımı, denediklerimi ve zamanla geliştireceğim projeleri bir araya getirdiğim alan.</p>
+        <a class="button primary" href="#projeler" data-i18n="explore">Projeleri keşfet <span aria-hidden="true">↘</span></a>
       </div>
-      <div class="workbench" aria-label="Portföyün gelişim süreci">
-        <div class="bench-top"><span><i></i><i></i><i></i></span><span>çalışma masası / 001</span></div>
-        <div class="bench-content"><p class="small-label">BİRİKTİR. DENE. GELİŞTİR.</p><div class="bench-mark" aria-hidden="true">&lt;<span>et</span>/&gt;</div><p class="bench-caption">Küçük başlangıçlar,<br>üzerine eklenen fikirler.</p></div>
-        <div class="bench-bottom"><span class="dot"></span> Bu sayfa da bir proje.</div>
-        <span class="paper-note" aria-hidden="true">her sürümde<br>biraz daha iyi. ↗</span>
+      <div class="workbench" aria-label="Portföyün gelişim süreci" data-i18n-aria="workbenchAria">
+        <div class="bench-top"><span><i></i><i></i><i></i></span><span data-i18n="benchTop">çalışma masası / 001</span></div>
+        <div class="bench-content"><p class="small-label" data-i18n="benchLabel">BİRİKTİR. DENE. GELİŞTİR.</p><div class="bench-mark" aria-hidden="true">&lt;<span>et</span>/&gt;</div><p class="bench-caption" data-i18n="benchCaption">Küçük başlangıçlar,<br>üzerine eklenen fikirler.</p></div>
+        <div class="bench-bottom" data-i18n="benchBottom"><span class="dot"></span> Bu sayfa da bir proje.</div>
+        <span class="paper-note" aria-hidden="true" data-i18n="paperNote">her sürümde<br>biraz daha iyi. ↗</span>
       </div>
     </section>
-    <div class="index-strip wrap"><span>FİKİRDEN EKRANA</span><span>Web · Arayüz · Veri</span><a href="#projeler">Aşağıda keşfet <span aria-hidden="true">↓</span></a></div>
+    <div class="index-strip wrap"><span data-i18n="stripLabel">FİKİRDEN EKRANA</span><span data-i18n="disciplines">Web · Arayüz · Veri</span><a href="#projeler" data-i18n="below">Aşağıda keşfet <span aria-hidden="true">↓</span></a></div>
     <section class="projects-section wrap" id="projeler" aria-labelledby="projects-title">
-      <div class="section-heading"><div><p class="eyebrow">01 / PROJELER</p><h2 id="projects-title">Üzerinde çalıştıklarım<span class="accent">.</span></h2></div><p>Tamamlanan işler kadar,<br>yolun başındaki fikirler de burada.</p></div>
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="projectsEyebrow">01 / PROJELER</p><h2 id="projects-title" data-i18n="projectsTitle">Üzerinde çalıştıklarım<span class="accent">.</span></h2></div><p data-i18n="projectsNote">Tamamlanan işler kadar,<br>yolun başındaki fikirler de burada.</p></div>
       <div class="project-tools" hidden>
-        <div class="filters" role="group" aria-label="Proje kategorisi"><button class="filter active" data-filter="all" aria-pressed="true">Tümü <span id="project-total"></span></button><button class="filter" data-filter="Web" aria-pressed="false">Web</button><button class="filter" data-filter="Arayüz" aria-pressed="false">Arayüz</button><button class="filter" data-filter="Veri" aria-pressed="false">Veri</button></div>
-        <label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">Projelerde ara</span><input id="project-search" type="search" placeholder="Proje veya teknoloji ara" autocomplete="off"></label>
+        <div class="filters" role="group" aria-label="Proje kategorisi" data-i18n-aria="categoryAria"><button class="filter active" data-filter="all" aria-pressed="true" data-i18n="all">Tümü <span id="project-total"></span></button><button class="filter" data-filter="Web" aria-pressed="false">Web</button><button class="filter" data-filter="Arayüz" aria-pressed="false" data-i18n="interface">Arayüz</button><button class="filter" data-filter="Veri" aria-pressed="false" data-i18n="data">Veri</button></div>
+        <label class="search"><span aria-hidden="true">⌕</span><span class="sr-only" data-i18n="search">Projelerde ara</span><input id="project-search" type="search" placeholder="Proje veya teknoloji ara" data-i18n-placeholder="searchPlaceholder" autocomplete="off"></label>
       </div>
       <p class="sr-only" id="result-count" role="status" aria-live="polite"></p>
       <div class="project-grid" id="project-grid"></div>
-      <p class="empty-state" id="empty-state" hidden>Bu aramayla eşleşen proje yok. Başka bir kelime veya kategori deneyebilirsin.</p>
+      <p class="empty-state" id="empty-state" hidden data-i18n="empty">Bu aramayla eşleşen proje yok. Başka bir kelime veya kategori deneyebilirsin.</p>
       <noscript><p>Proje kartlarını görmek için JavaScript'i etkinleştir. Mevcut projeler: <a href="grain/">Grainy Gradient Studio</a>, vibey ve Kişisel portföy. Planlanan fikirler: Görev panosu ve Veri atölyesi.</p></noscript>
-      <div class="project-footnote"><span class="dot"></span> Bu bir bitiş çizgisi değil; büyüyen bir arşiv.</div>
+      <div class="project-footnote" data-i18n="footnote"><span class="dot"></span> Bu bir bitiş çizgisi değil; büyüyen bir arşiv.</div>
     </section>
     <section class="about-section" id="hakkimda" aria-labelledby="about-title"><div class="wrap about-grid">
-      <div><p class="eyebrow">02 / HAKKIMDA</p><h2 id="about-title">Yaparak öğrenmek,<br>üzerine ekleyerek <br><span class="accent">ilerlemek.</span></h2></div>
-      <div class="about-copy"><p class="lead">Bir şeyi öğrenmenin en güzel yollarından biri, onunla bir şey yapmak.</p><p>Bu sayfayı projelerime düzenli olarak dönmek, onları geliştirmek ve yeni fikirler için yer açmak amacıyla kuruyorum. Her proje sayfasında neyi amaçladığımı, nasıl yaklaştığımı ve sırada ne olduğunu bulabilirsin.</p><p>Şimdilik küçük bir başlangıç. Zamanla daha fazla proje, daha fazla deneme ve süreçten notlar burada olacak.</p><a class="text-link" href="https://github.com/enestahtaci" target="_blank" rel="noopener noreferrer">GitHub profilimi incele <span aria-hidden="true">↗</span><span class="sr-only"> (yeni sekmede)</span></a></div>
+      <div><p class="eyebrow" data-i18n="aboutEyebrow">02 / HAKKIMDA</p><h2 id="about-title" data-i18n="aboutTitle">Yaparak öğrenmek,<br>üzerine ekleyerek <br><span class="accent">ilerlemek.</span></h2></div>
+      <div class="about-copy"><p class="lead" data-i18n="aboutLead">Bir şeyi öğrenmenin en güzel yollarından biri, onunla bir şey yapmak.</p><p data-i18n="aboutBody">Bu sayfayı projelerime düzenli olarak dönmek, onları geliştirmek ve yeni fikirler için yer açmak amacıyla kuruyorum. Her proje sayfasında neyi amaçladığımı, nasıl yaklaştığımı ve sırada ne olduğunu bulabilirsin.</p><p data-i18n="aboutEnd">Şimdilik küçük bir başlangıç. Zamanla daha fazla proje, daha fazla deneme ve süreçten notlar burada olacak.</p><a class="text-link" href="https://github.com/enestahtaci" target="_blank" rel="noopener noreferrer" data-i18n="githubProfile">GitHub profilimi incele <span aria-hidden="true">↗</span><span class="sr-only"> (yeni sekmede)</span></a></div>
     </div></section>
-    <section class="contact-section wrap" id="iletisim" aria-labelledby="contact-title"><div><p class="eyebrow">03 / İLETİŞİM</p><h2 id="contact-title">Bir sonraki fikir<br>bir merhabayla başlayabilir.</h2></div><a class="button primary" href="https://github.com/enestahtaci" target="_blank" rel="noopener noreferrer">GitHub'da buluşalım <span aria-hidden="true">↗</span><span class="sr-only"> (yeni sekmede)</span></a></section>
+    <section class="contact-section wrap" id="iletisim" aria-labelledby="contact-title"><div><p class="eyebrow" data-i18n="contactEyebrow">03 / İLETİŞİM</p><h2 id="contact-title" data-i18n="contactTitle">Bir sonraki fikir<br>bir merhabayla başlayabilir.</h2></div><a class="button primary" href="https://github.com/enestahtaci" target="_blank" rel="noopener noreferrer" data-i18n="meetGithub">GitHub'da buluşalım <span aria-hidden="true">↗</span><span class="sr-only"> (yeni sekmede)</span></a></section>
   </main>
-  <footer class="footer wrap"><span>© <span class="year">2026</span> Enes Tahtacı</span><span>Merakla başladı. Yaparak büyüyor.</span><a href="#main">Başa dön ↑</a></footer>
+  <footer class="footer wrap"><span>© <span class="year">2026</span> Enes Tahtacı</span><span data-i18n="footer">Merakla başladı. Yaparak büyüyor.</span><a href="#main" data-i18n="top">Başa dön ↑</a></footer>
 </body>
 </html>

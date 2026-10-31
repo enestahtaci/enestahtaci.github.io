@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Enes Tahtacı'nın projesi: amaç, yaklaşım ve sonraki geliştirme adımları.">
+  <meta data-i18n-content="detailMeta" name="description" content="Enes Tahtacı'nın projesi: amaç, yaklaşım ve sonraki geliştirme adımları.">
   <meta name="theme-color" content="#f7f6f2">
   <title>Proje detayı — Enes Tahtacı</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/projects.js" defer></script>
+  <script src="assets/i18n.js" defer></script>
   <script src="assets/app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">İçeriğe geç</a>
-  <header class="header wrap"><a class="brand" href="index.html"><span class="monogram">et<span>.</span></span><span>ENES TAHTACI</span></a><nav aria-label="Ana menü"><a href="index.html#projeler">Projeler</a><a href="index.html#hakkimda">Hakkımda</a></nav><button class="theme-button" type="button" aria-label="Koyu temaya geç" aria-pressed="false" hidden><span aria-hidden="true">◐</span></button></header>
-  <main class="wrap detail-main" id="main"><a class="text-link back-link" href="index.html#projeler">← Tüm projelere dön</a><div id="project-detail"></div><noscript><p>Proje detayını görmek için JavaScript'i etkinleştir.</p></noscript></main>
-  <footer class="footer wrap"><span>© <span class="year">2026</span> Enes Tahtacı</span><a href="index.html">Ana sayfa ↗</a></footer>
+  <a class="skip-link" href="#main" data-i18n="skip">İçeriğe geç</a>
+  <header class="header wrap"><a class="brand" href="index.html"><span class="monogram">et<span>.</span></span><span>ENES TAHTACI</span></a><nav aria-label="Ana menü" data-i18n-aria="navAria"><a href="index.html#projeler" data-i18n="projects">Projeler</a><a href="index.html#hakkimda" data-i18n="about">Hakkımda</a></nav><div class="header-controls"><button class="language-button" type="button" id="language-button" aria-label="İngilizceye geç" hidden>EN</button><button class="theme-button" type="button" aria-label="Koyu temaya geç" aria-pressed="false" hidden><span aria-hidden="true">◐</span></button></div></header>
+  <main class="wrap detail-main" id="main"><a class="text-link back-link" href="index.html#projeler" data-i18n="allProjects">← Tüm projelere dön</a><div id="project-detail"></div><noscript><p>Proje detayını görmek için JavaScript'i etkinleştir.</p></noscript></main>
+  <footer class="footer wrap"><span>© <span class="year">2026</span> Enes Tahtacı</span><a href="index.html" data-i18n="home">Ana sayfa ↗</a></footer>
 </body>
 </html>
